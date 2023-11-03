@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include<stdlib.h>
-#include<time.h>
+#include <string.h>
 
  struct infocliente{
         char nome[100];
@@ -22,8 +22,28 @@ int main(){
         scanf("%d",&opcao);
         
         switch(opcao){
-            
+            case 1:{
+                printf("digite o nome do cliente: ");
+                scanf("%s",clientes[numclientes].nome);
+                printf("digite o email do cliente: ");
+                scanf("%s",clientes[numclientes].email);
+                numclientes++;
                 
+                printf("clientes cadastrados com sucesso!\n");
+                printf("\n");
+                break;
+            }
+            case 2:{
+                printf("Clientes cadastrados:\n");
+                for(int i=0;i<numclientes;i++){
+                    printf("nome: %s\n",clientes[i].nome);
+                    printf("email: %s\n",clientes[i].email);
+                    printf("-------------------\n");
+                }
+                break;
+            }
+            case 3:
+        
             
         
         } 
