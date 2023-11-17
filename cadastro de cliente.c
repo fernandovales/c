@@ -12,6 +12,7 @@ int main() {
    int opcao, numClientes = 0;
 
    do {
+      printf("----------------------\n");
       printf("Selecione uma opção:\n");
       printf("1 - Adicionar cliente\n");
       printf("2 - Visualizar clientes\n");
@@ -32,9 +33,11 @@ int main() {
             numClientes++;
 
             printf("Cliente adicionado com sucesso.\n");
+            printf("\n");
             break;
          }
          case 2: {
+            printf("----------------------\n");
             printf("Clientes cadastrados:\n");
 
             for (int i = 0; i < numClientes; i++) {
@@ -42,11 +45,12 @@ int main() {
                printf("Email: %s\n", clientes[i].email);
                printf("----------------------\n");
             }
+            printf("\n");
             break;
          }
          case 3: {
             char nome[100];
-
+            printf("----------------------\n");
             printf("Digite o nome do cliente que deseja editar: ");
             scanf("%s", nome);
 
@@ -62,11 +66,12 @@ int main() {
                   break;
                }
             }
+            printf("\n");
             break;
          }
          case 4: {
             char nome[100];
-
+            printf("----------------------\n");
             printf("Digite o nome do cliente que deseja excluir: ");
             scanf("%s", nome);
 
@@ -82,9 +87,11 @@ int main() {
                   break;
                }
             }
+            printf("\n");
             break;
          }
          case 5:
+            printf("----------------------\n");
             printf("Encerrando o programa...\n");
             break;
          default:
